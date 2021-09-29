@@ -3,7 +3,6 @@
 const express = require('express');
 const morgan = require('morgan');
 
-// Importando rutas
 const productRoutes = require('./routes/products');
 const loginRoutes = require('./routes/login');
 const userRoutes = require('./routes/users');
