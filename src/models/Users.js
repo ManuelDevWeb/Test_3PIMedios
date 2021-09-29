@@ -1,4 +1,4 @@
-const { DBConnect } = require('../../db');
+const { DBConnect } = require('../db');
 const Sequelize = require('sequelize');
 
 // Importando modelo Sales
@@ -21,6 +21,8 @@ const User = DBConnect.define('users', {
     roles_id: {
         type: Sequelize.UUID
     }
+}, {
+    timestamps: false
 });
 
 User.hasMany(Sale, { foreingKey: 'users_id', sourceKey: 'id' });

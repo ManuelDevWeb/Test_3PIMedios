@@ -6,9 +6,9 @@ const app = require('./app');
 require('dotenv').config();
 const PORT = process.env.PORT || 3080;
 
-async function main() {
+async function runServer() {
     await app.listen(PORT);
     console.log(`Server running in port ${PORT}`);
 }
 
-main();
+runServer();

@@ -22,15 +22,4 @@ const DBConnect = new Sequelize(
 )
 
 
-
-/*
-const pool = new Pool({
-    host: 'localhost',
-    user: 'postgres',
-    password: PASSWORD,
-    database: 'store',
-    port: '5432'
-})
-*/
-
 module.exports = { DBConnect };

@@ -1,4 +1,4 @@
-const { DBConnect } = require('../../db');
+const { DBConnect } = require('../db');
 const Sequelize = require('sequelize');
 
 // Importando modelo User
