@@ -23,6 +23,7 @@ const Product = DBConnect.define('products', {
     timestamps: false
 });
 
+// Relacion con Sales
 Product.hasMany(Sale, { foreignKey: "products_id" });
 Sale.belongsTo(Product);
 

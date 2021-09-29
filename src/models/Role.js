@@ -17,6 +17,7 @@ const Role = DBConnect.define('roles', {
     timestamps: false
 });
 
+// Relacion con Users
 Role.hasMany(User, { foreingKey: 'roles_id', sourceKey: 'id' });
 User.belongsTo(Role);
 

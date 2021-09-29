@@ -25,7 +25,7 @@ const User = DBConnect.define('users', {
     timestamps: false
 });
 
-
+// Relacion con Sales
 User.hasMany(Sale, { foreignKey: "users_id" });
 Sale.belongsTo(User);
 
