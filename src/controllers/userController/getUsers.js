@@ -5,6 +5,7 @@ const { User } = require('../../models/Users');
 const getUsers = async(req, res) => {
     try {
         const allUsers = await User.findAll();
+
         if (allUsers.length > 0) {
             return res.json({
                 data: allUsers

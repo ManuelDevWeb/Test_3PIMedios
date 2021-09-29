@@ -13,24 +13,21 @@ const roleUser = async(req, res) => {
             }
         });
 
-        if (user) {
-            await User.update({
-                roles_id
-            }, {
-                where: { roles_id }
-            });
-            return res.json({
-                message: 'correctly assigned role',
-                userUpdate: {
-                    name: user.name,
-                    document: user.document
-                }
-            })
-        } else {
-            return res.json({
-                message: 'User not exist'
-            })
-        }
+        const updateRole = await User.update({
+            roles_id
+        }, {
+            where: { id }
+        });
+
+        return res.json({
+            message: 'correctly assigned role',
+            userUpdate: {
+                name: user.name,
+                document: user.document
+            },
+            updateRole
+        })
+
 
     } catch (error) {
         console.log(error);

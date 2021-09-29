@@ -18,6 +18,7 @@ const deleteUser = async(req, res) => {
             }
         })
 
+
         if (userDelete) {
             console.log(userDelete);
             return res.json({
