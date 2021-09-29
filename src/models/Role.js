@@ -13,6 +13,8 @@ const Role = DBConnect.define('roles', {
     name: {
         type: Sequelize.TEXT
     }
+}, {
+    timestamps: false
 });
 
 Role.hasMany(User, { foreingKey: 'roles_id', sourceKey: 'id' });

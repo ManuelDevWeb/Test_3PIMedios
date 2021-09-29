@@ -5,6 +5,7 @@ const morgan = require('morgan');
 
 // Importando rutas
 const productRoutes = require('./routes/products');
+const loginRoutes = require('./routes/login');
 const userRoutes = require('./routes/users');
 const saleRoutes = require('./routes/sales');
 
@@ -20,6 +21,7 @@ app.use(express.urlencoded({ extended: false }));
 
 // Rutas
 app.use('/api/v1/', productRoutes);
+app.use('/api/v1/', loginRoutes);
 app.use('/api/v1/', userRoutes);
 app.use('/api/v1/', saleRoutes);
 
