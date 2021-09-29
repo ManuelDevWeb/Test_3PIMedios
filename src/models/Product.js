@@ -23,7 +23,7 @@ const Product = DBConnect.define('products', {
     timestamps: false
 });
 
-Product.hasMany(Sale, { foreingKey: 'products_id', sourceKey: 'id' });
-Sale.belongsTo(Product, { foreingKey: 'products_id', sourceKey: 'id' });
+Product.hasMany(Sale, { foreignKey: "products_id" });
+Sale.belongsTo(Product);
 
 module.exports = { Product };

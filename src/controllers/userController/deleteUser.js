@@ -1,4 +1,4 @@
-// Importando el modelo Producto
+// Importando el modelo User
 const { User } = require('../../models/Users');
 
 // Eliminar usuario

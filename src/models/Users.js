@@ -1,7 +1,7 @@
 const { DBConnect } = require('../db');
 const Sequelize = require('sequelize');
 
-// Importando modelo Sales
+// Importando modelo Sale
 const { Sale } = require('./Sales');
 
 const User = DBConnect.define('users', {
@@ -25,7 +25,8 @@ const User = DBConnect.define('users', {
     timestamps: false
 });
 
-User.hasMany(Sale, { foreingKey: 'users_id', sourceKey: 'id' });
-Sale.belongsTo(User, { foreingKey: 'users_id', sourceKey: 'id' });
+
+User.hasMany(Sale, { foreignKey: "users_id" });
+Sale.belongsTo(User);
 
 module.exports = { User };

@@ -18,6 +18,6 @@ const Role = DBConnect.define('roles', {
 });
 
 Role.hasMany(User, { foreingKey: 'roles_id', sourceKey: 'id' });
-User.belongsTo(Role, { foreingKey: 'roles_id', sourceKey: 'id' });
+User.belongsTo(Role);
 
 module.exports = { Role };

@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS users(
 	name VARCHAR(30) not null,
 	roles_id UUID not null,
 	FOREIGN KEY (roles_id) REFERENCES roles(id)
-)
+);
 
 -- Sales
 CREATE TABLE IF NOT EXISTS sales(
@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS sales(
 	qty INTEGER not null,
 	sale_at TIMESTAMP not null,
 	users_id UUID not null REFERENCES users(id)
-)
+);
 
 -- Insertando en products
 INSERT INTO products (id, name, description, price) VALUES
@@ -42,6 +42,7 @@ INSERT INTO products (id, name, description, price) VALUES
 ('3bed5d90-64ed-4bc1-8a3a-a378737ed542', 'Agua con gas', '500 ml', 2500),
 ('c3f25f98-c5c3-4a00-b550-f716ae36b25f', 'Docena de huevos', 'ministro de hacienda aprueba', 1800);
 
+-- Insertando algunos datos para pruebas
 INSERT INTO roles (id, name) VALUES
 ('19023b0c-20d0-11ec-9621-0242ac130002', 'admin'),
 ('19023d3c-20d0-11ec-9621-0242ac130002', 'employee'),

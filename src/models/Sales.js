@@ -19,6 +19,9 @@ const Sale = DBConnect.define('sales', {
     users_id: {
         type: Sequelize.UUID
     }
+}, {
+    timestamps: false
 });
+
 
 module.exports = { Sale };
